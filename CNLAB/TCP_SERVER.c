@@ -32,7 +32,7 @@ int main() {
     while(1) {
         int len = sizeof(client);
         new_sockfd = accept(sockfd, (struct sockaddr*)&client, &len);
-        if(sockfd < 0) {
+        if(new_sockfd < 0) {
             printf("Accept Err\n");
             exit(0);
         }
